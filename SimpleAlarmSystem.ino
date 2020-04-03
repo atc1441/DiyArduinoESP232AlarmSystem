@@ -93,7 +93,7 @@ String sendTelegramMSG(String command) {
     String a = "";
     char c;
     int ch_count = 0;
-    client.println("GET /" + command);
+    client.println("GET /bot" + command);
     now = millis();
     avail = false;
     while (millis() - now < 6000) {
