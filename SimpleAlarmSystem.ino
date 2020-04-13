@@ -1,5 +1,6 @@
 #include <RCSwitch.h>// https://github.com/sui77/rc-switch
-#include <WiFi.h>
+#include <WiFi.h>//for ESP32
+//#include <ESP8266Wifi.h>//for ESP8266
 #include <WiFiClientSecure.h>
 
 char ssid[] = "*****";     // your network SSID (name)
@@ -56,6 +57,7 @@ void parseRemote(int remoteID) {
 }
 
 void setup() {
+  client.setInsecure();
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
