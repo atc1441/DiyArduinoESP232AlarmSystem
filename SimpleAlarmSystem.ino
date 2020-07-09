@@ -57,7 +57,7 @@ void parseRemote(int remoteID) {
 }
 
 void setup() {
-  client.setInsecure();
+  //client.setInsecure();
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
